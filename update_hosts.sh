@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: Use argument to replace hardcode myspark
+
 # Assume kubectl is installed and configured. Read ips and pod names of pods
 kubectl get pods -o wide | grep myspark | awk '{print $6,$1}' > ips.txt
 # kubectl get pods -o wide | grep myspark | cut -d' ' -f1 > pods.txt
