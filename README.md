@@ -17,7 +17,7 @@ Spark 2.3.1-hadoop-3.0 used.
 
 ## Issues
 * k8s is running on openstack. NO idea how LoadBalancer works on k8s of openstack. still working on this.
-* Workers have trouble connecting to master? still testing this.
+* Hostnames or pod names of workers not resolvable?
 
 ## Installing the Chart
 
@@ -26,6 +26,10 @@ To install the chart with the release name `myspark`:
 ```
 # Go to the chart directory
 helm install --name myspark  --debug .
+# Update /etc/hosts on each pod
+# Update release name in update_hosts.sh
+# Refer to issues
+bash update_hosts.sh
 ```
 
 ## Uninstall the release `myspark`
