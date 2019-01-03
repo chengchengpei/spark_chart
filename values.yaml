@@ -7,7 +7,7 @@
 Master:
   Name: master
   Image: "gettyimages/spark"
-  ImageTag: "2.3.1-hadoop-3.0"
+  ImageTag: "2.2.1-hadoop-2.7"
   Replicas: 1
   Component: "spark-master"
   Cpu: "100m"
@@ -31,7 +31,7 @@ WebUi:
 Worker:
   Name: worker
   Image: "gettyimages/spark"
-  ImageTag: "2.3.1-hadoop-3.0"
+  ImageTag: "2.2.1-hadoop-2.7"
   Replicas: 3
   Component: "spark-worker"
   Cpu: "100m"

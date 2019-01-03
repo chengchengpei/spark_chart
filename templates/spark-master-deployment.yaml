@@ -85,7 +85,7 @@ spec:
         - name: {{ template "master-fullname" . }}
           image: "{{.Values.Master.Image}}:{{.Values.Master.ImageTag}}"
           command: ["/bin/sh","-c"]
-          args: ["echo $(hostname -i) {{ template "master-fullname" . }} >> /etc/hosts; /usr/spark-2.3.1/bin/spark-class org.apache.spark.deploy.master.Master --ip {{ template "master-fullname" . }} --port {{.Values.Master.ServicePort}} --webui-port {{.Values.WebUi.ContainerPort}}"]
+          args: ["echo $(hostname -i) {{ template "master-fullname" . }} >> /etc/hosts; /usr/spark-2.2.1/bin/spark-class org.apache.spark.deploy.master.Master --ip {{ template "master-fullname" . }} --port {{.Values.Master.ServicePort}} --webui-port {{.Values.WebUi.ContainerPort}}"]
           ports:
             - containerPort: {{.Values.Master.ServiceContainerPort}}
             - containerPort: {{.Values.Master.RestContainerPort}}
@@ -98,7 +98,7 @@ spec:
           - name: SPARK_DAEMON_MEMORY
             value: {{ default "1g" .Values.Master.DaemonMemory | quote }}
           volumeMounts:
-            - mountPath: /usr/spark-2.3.1/conf
+            - mountPath: /usr/spark-2.2.1/conf
               name: conf
       volumes:
         - name: conf

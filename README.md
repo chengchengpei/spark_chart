@@ -13,7 +13,7 @@ Spark docker image:
 * https://hub.docker.com/r/gettyimages/spark
 
 ## Chart Details
-Spark 2.3.1-hadoop-3.0 used.
+Spark 2.2.1-hadoop-2.7 used.
 
 ## Issues
 * k8s is running on openstack. NO idea how LoadBalancer works on k8s of openstack. still working on this.
@@ -48,7 +48,7 @@ The following tables lists the configurable parameters of the Spark chart and th
 | ----------------------- | ---------------------------------- | ---------------------------------------------------------- |
 | `Master.Name`           | Spark master name                  | `spark-master`                                             |
 | `Master.Image`          | Container image name               | `gettyimages/spark`                                        | 
-| `Master.ImageTag`       | Container image tag                | `2.3.1-hadoop-3.0`                                         |
+| `Master.ImageTag`       | Container image tag                | `2.2.1-hadoop-2.7`                                         |
 | `Master.Replicas`       | k8s deployment replicas            | `1`                                                        |
 | `Master.Component`      | k8s selector key                   | `spark-master`                                             |
 | `Master.Cpu`            | container requested cpu            | `100m`                                                     |
@@ -71,7 +71,7 @@ The following tables lists the configurable parameters of the Spark chart and th
 | -----------------------      | ---------------------------------- | ---------------------------------------------------------- |
 | `Worker.Name`                | Spark worker name                  | `spark-worker`                                             |
 | `Worker.Image`               | Container image name               | `gettyimages/spark`                                        |
-| `Worker.ImageTag`            | Container image tag                | `2.3.1-hadoop-3.0`                                         |
+| `Worker.ImageTag`            | Container image tag                | `2.2.1-hadoop-2.7`                                         |
 | `Worker.Replicas`            | k8s hpa and deployment replicas    | `3`                                                        |
 | `Worker.ReplicasMax`         | k8s hpa max replicas               | `10`                                                       |
 | `Worker.Component`           | k8s selector key                   | `spark-worker`                                             |

@@ -5,7 +5,7 @@ metadata:
 data:
   spark-defaults.conf: |
     spark.master spark://{{ template "master-fullname" . }}:7077
-    spark.driver.extraLibraryPath /usr/hadoop-3.0.0/lib/native
+    spark.driver.extraLibraryPath /usr/hadoop-2.7.3/lib/native
     spark.app.id {{ template "master-fullname" . }} 
     spark.ui.reverseProxy true
   upstreamNameservers: |
