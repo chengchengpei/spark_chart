@@ -16,6 +16,8 @@ Spark docker image:
 ## Issues
 * k8s is running on openstack. NO idea how LoadBalancer works on k8s of openstack. still working on this.
 * Hostnames or pod names of workers not resolvable?
+* Data may be lost during `kubectl cp`. Use `md5` or `md5sum` to compare MD5.
+* Spark docker image should be customized for dependencies match.
 
 ## TODO
 ### Spark docker image should be updated because of the following two issues

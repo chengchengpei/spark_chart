@@ -10,4 +10,3 @@ data:
     spark.ui.reverseProxy true
   upstreamNameservers: |
     ["8.8.8.8", "8.8.4.4"]
-{{ (.Files.Glob "conf-files/log4j.properties").AsConfig | indent 2 }}
