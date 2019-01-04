@@ -12,12 +12,15 @@ Inspired from the following:
 Spark docker image:
 * https://hub.docker.com/r/gettyimages/spark
 
-## Chart Details
-Spark 2.2.1-hadoop-2.7 used.
 
 ## Issues
 * k8s is running on openstack. NO idea how LoadBalancer works on k8s of openstack. still working on this.
 * Hostnames or pod names of workers not resolvable?
+
+## TODO
+### Spark docker image should be updated because of the following two issues
+* In docker image gettyimages/spark 2.2.1-hadoop-2.7 (https://hub.docker.com/r/gettyimages/spark/tags), avro-1.7.4.jar exists, which is different from https://archive.apache.org/dist/spark/spark-2.2.1/spark-2.2.1-bin-hadoop2.7.tgz, where avro-1.7.7.jar included.
+* Proper `cacerts` file should be put in `/usr/jdk1.8.0_131/jre/lib/security`
 
 ## Installing the Chart
 
